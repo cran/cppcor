@@ -1,0 +1,38 @@
+This package can be installed as a regular R package, that is,
+   install.packages(cppcor)
+
+if the GTK+ library is not already installed on your system,
+installation may fail.
+
+On Windows, the user must set the GTK_PATH environment variable to the
+location of the root directory of the GTK+ library (ie \c:\opt\gtk). Try
+downloading the GTK+ bundle from:
+
+http://ftp.gnome.org/pub/gnome/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip
+or
+http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.22/gtk+-bundle_2.22.1-20101227_win32.zip
+
+Then add the path to its “bin” subfolder (e.g., c:\opt\gtk\bin) to your system PATH environment
+variable.
+
+Another alternative for installing the GTK + library
+in R software itself is install and load
+the gWidgetsRGtk2 package in advance on R:
+   install.packages("gWidgetsRGtk2")
+   library(gWidgetsRGtk2)
+
+A new window dialog window will appear, asking if you want to install “GTK+”.
+Select “Install GTK” and then “OK”. This way the GTK + library will be installed automatically.
+
+To install PCCor on Linux, you have to first install the following
+required dependencies. On Debian and Ubuntu-based systems,
+to install those packages open a terminal and type:
+  sudo apt-get install r-cran-cairodevice r-cran-rgtk2 libcairo2-dev libatk1.0-dev libpango1.0-dev libgtk2.0-dev libglib2.0-dev libcurl4-openssl-dev
+
+
+This README file was written based on the INSTALL and README files of RGTk2 and
+MODIStsp packages, respectively. Of which the latter was very well detailed.
+The links to these files follow:
+
+RGTk2, INSTALL: https://cran.r-project.org/web/packages/RGtk2/INSTALL
+MODISstp, README: https://cran.r-project.org/web/packages/MODIStsp/readme/README.html
